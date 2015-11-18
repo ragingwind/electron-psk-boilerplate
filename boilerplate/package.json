@@ -1,14 +1,14 @@
 {
-  "name": "<%= app %>",
-  "productName": "<%= productName %>",
+  "name": "appName",
+  "productName": "productName",
   "version": "0.0.0",
-  "description": "<%= desciption %>",
+  "description": "desciption",
   "license": "MIT",
-  "repository": "<%= name %>/<%= app %>",
+  "repository": "username/appName",
   "author": {
-    "name": "<%= name %>",
-    "email": "<%= email %>",
-    "url": "<%= website %>"
+    "name": "username",
+    "email": "email",
+    "url": "website"
   },
   "engines": {
     "node": ">=4"
@@ -16,15 +16,17 @@
   "electronVersion": "0.34.0",
   "scripts": {
     "test": "xo",
-    "start": "electron .",
-    "build": "electron-packager . $npm_package_productName --out=dist --ignore='^/dist$' --prune --asar --all --version=$npm_package_electronVersion"
+    "start": "electron ./src/platform",
+    "build": "electron-packager . $npm_package_productName --out=dist --ignore='^/dist$' --prune --asar --all --version=$npm_package_electronVersion",
+    "postinstall": "mkdir -p src && got-psk ./src light"
   },
   "files": [
-    "index.js",
-    "index.html",
-    "index.css"
+    "src/"
   ],
   "keywords": [
+    "Polymer Starter Kit",
+    "polymer",
+    "electron",
     "electron-app"
   ],
   "dependencies": {
@@ -33,6 +35,7 @@
   "devDependencies": {
     "electron-packager": "^5.0.0",
     "electron-prebuilt": "^0.34.0",
+    "got-psk": "0.0.4",
     "xo": "^0.9.0"
   },
   "xo": {
