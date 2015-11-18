@@ -2,6 +2,7 @@
 
 > Boilerplate to kickstart creating an app with [Electron](https://github.com/atom/electron) and [Polymer Starter Kit](https://github.com/PolymerElements/polymer-starter-kit)
 
+![](https://cloud.githubusercontent.com/assets/124117/11257732/f85b91d6-8e96-11e5-8d9d-45fd65968d4b.png)
 
 ## Getting started
 
