@@ -15,6 +15,17 @@ You can also `git clone` or [download](https://github.com/ragingwind/electron-ps
 
 Yet ~~There's also a [Yeoman generator](https://github.com/ragingwind/generator-electron).~~
 
+
+## Patch for running route properly
+
+Until v1.1.1 for PSK, You should add the following code to `src/app/elements/routing.html`. See [the doc](https://github.com/PolymerElements/polymer-starter-kit/blob/master/docs/chrome-dev-editor.md) for further information.
+
+```
+page('*', function() {
+  page.redirect('/');
+});
+```
+
 ## License
 
 MIT © [ragingwind](http://ragingwind.me)
