@@ -19,11 +19,26 @@ Yet ~~There's also a [Yeoman generator](https://github.com/ragingwind/generator-
 
 ## Patch for running route properly
 
-Until v1.1.1 for PSK, You should add the following code to `src/app/elements/routing.html`. See [the doc](https://github.com/PolymerElements/polymer-starter-kit/blob/master/docs/chrome-dev-editor.md) for further information.
+### For v1.1.1
 
-```
+You should add the following code to `src/app/elements/routing.html`. See [the doc](https://github.com/PolymerElements/polymer-starter-kit/blob/master/docs/chrome-dev-editor.md) for further information.
+
+```js
 page('*', function() {
   page.redirect('/');
+});
+```
+
+### For v1.2.1
+
+You probably see the notification about route failed that could be annoyed but you could ignore it as update by code below in commenting toast code.
+
+```js
+// 404
+page('*', function() {
+  // app.$.toast.text = 'Can\'t find: ' + window.location.href  + '. Redirected you to Home Page';
+  // app.$.toast.show();
+  page.redirect(app.baseUrl);
 });
 ```
 
